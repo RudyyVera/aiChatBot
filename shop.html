@@ -736,6 +736,21 @@ https://templatemo.com/tm-559-WebDenify-shop
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script>
+        window.watsonAssistantChatOptions = {
+          integrationID: "47ffdf40-ae1a-4454-9a67-27284eecc0ac", // The ID of this integration.
+          region: "au-syd", // The region your integration is hosted in.
+          serviceInstanceID: "da7af01a-79dd-4a58-b9b4-9cefb93491c4", // The ID of your service instance.
+          onLoad: async (instance) => { await instance.render(); }
+        };
+        setTimeout(function(){
+          const t=document.createElement('script');
+          t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+          document.head.appendChild(t);
+        });
+
+
+      </script>
     <!-- End Script -->
 </body>
 
